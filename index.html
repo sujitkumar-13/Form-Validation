@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="log-out-btn">
+        <button>Log Out</button>
+    </div>
+
+    <div class="container">
+        <div class="mini-box">
+            <div class="sign-in">
+                <form action="" class="sign-in-form">
+                    <h2 class="heading"><b>Login</b></h2>
+                    <div class="input-field">
+                        <input type="text" placeholder=" ">
+                        <i class="fa-solid fa-envelope"></i>
+                        <label>Email</label>
+
+                    </div>
+                    <div class="input-field">
+                        <input type="password" placeholder=" " id="password1">              
+                        <i class="fa-solid fa-eye" id="hide-password1"></i>
+                        <i class="fa-solid fa-eye-slash" id="show-password1"></i>
+                        <label>Password</label>
+                    </div>
+                </form>
+                <div class="btn-box">
+                    <h1 class="all-error"></h1>
+                    <button class="login-btn">Login</button>
+                    <h2>Don't have an account? <a href="/" class="register">Register</a></h2>
+                </div>
+            </div>
+            <div class="sign-up">
+                <form action="" class="sign-in-form">
+                    <h2 class="heading"><b>Register</b></h2>
+                    <div class="input-field">
+                        <input type="text" placeholder=" " id="signupname" autocomplete="off">
+                        <i class="fa-solid fa-circle-user"></i>
+                        <label>Name</label>
+                    </div>
+                    <div class="input-field ">
+                        <input type="text" placeholder=" " id="signupUsername" autocomplete="off">
+                        <i class="fa-solid fa-user"></i>
+                        <label>UserName</label>
+                        <h1 class="userError"></h1>
+                    </div>
+
+                    <div class="input-field ">
+                        <input type="email" placeholder=" " id="signupEmail" autocomplete="off">
+                        <i class="fa-solid fa-envelope"></i>
+                        <label>Email</label>
+                        <h1 class="emailError"></h1>
+                    </div>
+                    <div class="input-field ">
+                        <input type="text" placeholder=" " id="signupNumber" autocomplete="off">
+                        <i class="fa-solid fa-phone"></i>
+                        <label>Number</label>
+                        <h1 class="numberError"></h1>
+                    </div>
+                    <div class="input-field ">
+                        <input type="password" placeholder=" " id="password2" class="signupPassword"
+                            autocomplete="new-password">
+                        <i class="fa-solid fa-eye" id="hide-password2"></i>
+                        <i class="fa-solid fa-eye-slash" id="show-password2"></i>
+                        <label>Password</label>
+                        <h1 class="passwordError"></h1>
+                    </div>
+                </form>
+                <div class="btn-box ">
+                    <h1 class="all-error"></h1>
+                    <button class="register-btn">Register</button>
+                    <h2>Do you have already account? <a href="/" class="log-in">Log In</a></h2>
+                </div>
+            </div>
+        </div>
+        <div class="afterRegister">
+            <h1 class="greeting">Hello <span class="username"></span></h1>
+            <h1 class="complete">You successfullly login in this.</h1>
+        </div>
+    </div>
+</body>
+
+</html>

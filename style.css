@@ -1,0 +1,266 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #fff;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url('image/bg1.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.container {
+    border-radius: 20px;
+    max-width: 600px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 0 20px rgba(0, 255, 150, 0.5),
+        0 0 40px rgba(0, 120, 255, 0.4),
+        0 0 60px rgba(255, 50, 0, 0.3);
+}
+
+.container:hover {
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.7),
+        0 0 50px rgba(255, 0, 255, 0.6),
+        0 0 75px rgba(255, 165, 0, 0.5);
+    transition: 0.3s ease-in-out;
+}
+
+.sign-in,
+.sign-up {
+    padding: 20px;
+}
+
+.sign-in {
+    display: block;
+}
+
+.sign-up {
+    display: none;
+}
+
+.heading {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 900;
+    font-size: 40px;
+    text-align: center;
+    padding: 10px;
+}
+
+.input-field {
+    padding: 20px;
+    margin-top: 15px;
+    position: relative;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+
+.input-field h1 {
+    font-size: 16px;
+    color: rgb(187, 9, 9);
+    font-weight: bolder;
+    position: absolute;
+    top: 88px;
+    left: 26px;
+}
+
+
+.input-field label {
+    position: absolute;
+    font-size: 22px;
+    top: 36px;
+    left: 30px;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    color: rgba(255, 255, 255, 0.705);
+    transition: all 0.3s ease-in-out;
+}
+
+.input-field input:focus~label,
+.input-field input:not(:placeholder-shown)~label {
+    top: 10px;
+    font-size: 18px;
+}
+
+.input-field i {
+    font-size: 24px;
+    position: absolute;
+    top: 35px;
+    right: 30px;
+    color: #f8f6f6e1;
+}
+
+.input-field input {
+    height: 60px;
+    width: 100%;
+    border: none;
+    background: transparent;
+    font-size: 20px;
+    padding-left: 10px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: rgba(252, 249, 249, 0.918);
+}
+
+#hide-password1,
+#hide-password2 {
+    display: none;
+}
+
+#show-password1,
+#show-password2 {
+    display: block;
+}
+
+.btn-box {
+    display: flex;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+    position: relative;
+}
+
+.btn-box button {
+    width: 80%;
+    height: 100%;
+    font-size: 22px;
+    padding: 10px;
+    border-radius: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    background: rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    font-weight: 700;
+    transition: 0.3s ease-in-out;
+}
+
+.btn-box button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: white;
+}
+
+.btn-box h2 {
+    font-size: 20px;
+}
+
+.btn-box a {
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+.all-error {
+    position: absolute;
+    bottom: 115px;
+    left: 10px;
+    font-size: 18px;
+    color: rgb(187, 9, 9);
+    font-weight: bolder;
+}
+
+.afterRegister {
+    padding: 20px;
+    display: none;
+
+}
+
+.greeting {
+    padding: 10px;
+    color: green;
+    font-size: 40px;
+    letter-spacing: 2px;
+    word-spacing: 5px;
+    line-height: 100px;
+}
+
+.complete {
+    margin-top: 20px;
+    font-size: 40px;
+    color: rgb(202, 208, 209);
+}
+
+.log-out-btn {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    display: none;
+}
+
+.log-out-btn button {
+    padding: 22px 24px;
+    font-size: 20px;
+    border-radius: 20px;
+    border: none;
+    background: rgba(100, 97, 97, 0.952);
+    font-weight: bolder;
+    outline: none;
+}
+
+.log-out-btn button:hover {
+    background: rgba(99, 92, 92, 0.678);
+}
+
+@media(max-width: 650px) {
+
+    .greeting {
+        line-height: 50px;
+    }
+}
+
+@media(max-width: 542px) {
+
+    .heading {
+        font-size: 40px;
+    }
+
+    .sign-in,
+    .sign-up {
+        padding: 10px;
+    }
+
+    .btn-box h2 {
+        font-size: 18px;
+    }
+}
+
+@media(max-width: 400px) {
+    .input-field i {
+        font-size: 20px;
+        display: none;
+    }
+
+    .all-error {
+        bottom: 118px;
+        font-size: 16px;
+    }
+}
+
+@media(max-width: 359px){
+    .all-error {
+        bottom: 138px;
+        font-size: 16px;
+    }
+}
